@@ -1,0 +1,44 @@
+.ContactBanner {
+  width: 100dvw;
+  background-image: url("/images/bg-vector.webp");
+  background-position: center;
+
+  .cont {
+    text-align: center;
+    height: 70dvh;
+    @include flexCenter;
+    flex-direction: column;
+
+    h1 {
+      font-size: 86px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 28px;
+    }
+
+    .bgImg {
+      margin-top: 80px;
+      // background-color: red;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    background-position: center -250px;
+
+    .cont {
+      padding-top: 40px;
+
+      h1 {
+        font-size: 50px;
+        max-width: 280px;
+      }
+    }
+  }
+}

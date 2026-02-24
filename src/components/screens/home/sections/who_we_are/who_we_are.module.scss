@@ -1,0 +1,86 @@
+.WhoWeAreSection {
+  padding: 100px 0;
+  .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    .left {
+      //   padding: 50px;
+
+      img {
+        border-radius: 24px;
+      }
+    }
+
+    .right {
+      .text {
+        margin-bottom: 20px;
+        h3 {
+          font-size: 64px;
+          line-height: 70px;
+          letter-spacing: -0.25px;
+          margin: 20px 0;
+          color: $color_black;
+        }
+
+        p {
+          color: $color_text_grey;
+        }
+      }
+
+      .bot {
+        display: flex;
+        // justify-content: space-between;
+        gap: 50px;
+
+        .exp {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          h4 {
+            font-size: 100px;
+            line-height: 110px;
+
+            span {
+              color: $color_primary;
+            }
+          }
+
+          p {
+            font-size: 20px;
+          }
+        }
+
+        .points {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+
+          p {
+            font-size: 18px;
+
+            svg {
+              color: $color_primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .cont {
+      grid-template-columns: 1fr;
+
+      .right {
+        .bot {
+          gap: 10px;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

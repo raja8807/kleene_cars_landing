@@ -1,0 +1,15 @@
+.smallHead {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $color_text_grey;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  svg {
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: $color_primary;
+  }
+}

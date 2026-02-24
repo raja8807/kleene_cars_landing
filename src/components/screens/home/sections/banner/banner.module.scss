@@ -1,0 +1,80 @@
+.BannerSection {
+  width: 100dvw;
+
+  .bannerLg {
+    .topContainer {
+      .top {
+        height: 40vh;
+
+        display: flex;
+        align-items: flex-end;
+
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+
+          h2 {
+            font-size: 150px;
+            text-transform: uppercase;
+            color: $color_primary;
+          }
+
+          p {
+            max-width: 250px;
+            font-size: 18px;
+            color: $color_text_grey;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+
+    .bottomContainer {
+      height: 50vh;
+      background-image: url("/images/banner_bg.jpg");
+      background-position: center;
+
+      h2 {
+        font-size: 180px;
+        line-height: 150px;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+
+  .bannerSm {
+    height: 80vh;
+    background-image: url("/images/banner_bg.jpg");
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-size: 70px;
+
+      &.r {
+        color: $color_primary;
+      }
+
+      &.w {
+        color: white;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .bannerLg {
+      display: none;
+    }
+  }
+
+  @include respond-above(md) {
+    .bannerSm {
+      display: none;
+    }
+  }
+}
